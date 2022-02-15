@@ -37,9 +37,9 @@ int main()
 }
 int zar(void)
 {
-    int puan=0,i;
+    int i,n=0;
     srand(time(NULL));
     for(i=0;i<2;i++)
-        puan+=rand()%6+1;
-    return puan;
+        n+=rand()%6+1;
+    return n;
 }
