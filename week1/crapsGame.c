@@ -6,6 +6,7 @@ int zar (void);
 int main()
 {
     int puan,puan_old;
+    srand(time(NULL));
     puan=zar();
     printf("\npuanınız %d\n",puan);
     if(puan==7  || puan==11)
@@ -22,7 +23,7 @@ int main()
     while(1)
     {    
         puan=zar();
-        printf("\ngelen sayı %d\n",puan);
+        printf(" = %d\n",puan);
         if(puan==puan_old)
         {
             printf("\nTebrikler! kazandınız\n");
@@ -37,9 +38,12 @@ int main()
 }
 int zar(void)
 {
-    int i,n=0;
-    srand(time(NULL));
+    int i,n,sum=0;
     for(i=0;i<2;i++)
-        n+=rand()%6+1;
-    return n;
+    {
+        n=rand()%6+1;
+        printf("%3d",n);
+        sum+=n;
+    }    
+    return sum;
 }
