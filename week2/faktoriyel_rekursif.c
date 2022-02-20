@@ -3,6 +3,7 @@ int faktoriyel(int);
 int main()
 {
     faktoriyel(10);
+    return 0;
 }
 int faktoriyel(int x)
 {
