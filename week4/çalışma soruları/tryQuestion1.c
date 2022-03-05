@@ -15,23 +15,25 @@ int main()
     }
     printf("kac kez tekrar eden elemanlrın yazdırılmasını istersiniz ");
     scanf("%d",&x);
-    
+    printf("\n%d kez tekrar eden elemanlar: \n",x);
     for(i=0;i<m;i++)
     {
         counter=0;
-        for(j=0;j<m;j++)
+        for(j=i;j<m;j++)
         {
             if(p[i]==p[j])
+            {
                 counter++;
+            }    
         }
         if(counter==x)
-            printf("%d",p[i]);
+            printf(" %d",p[i]);
         if(counter>max)
         {
             max=counter;
             max_eleman=p[i];
         }    
     }
-    printf("en cok tekrar eden eleman = %d",max_eleman);
+    printf("\nen cok tekrar eden eleman = %d",max_eleman);
     return 0;
 }
