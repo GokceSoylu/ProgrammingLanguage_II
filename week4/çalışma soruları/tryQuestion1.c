@@ -13,7 +13,7 @@ int main()
         printf("%d.eleman",i+1);
         scanf("%d",&p[i]);
     }
-    printf("kac kez tekrar eden elemanlrın yazdırılmasını istersiniz ");
+    printf("\nkac kez tekrar eden elemanların yazdırılmasını istersiniz ");
     scanf("%d",&x);
     printf("\n%d kez tekrar eden elemanlar: \n",x);
     for(i=0;i<m;i++)
