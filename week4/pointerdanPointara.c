@@ -9,7 +9,7 @@ int main()
     printf("%s\n",array);
     for(i=0;i<10;i++)
         *(l+i)=*(p+i);
-    *(l+i)=*(p+i);
+    *(l+i)=*(p+i);//son elemanı atamak için
     printf("%s\n",array2);
     return 0;    
 }//güzel oldu :)

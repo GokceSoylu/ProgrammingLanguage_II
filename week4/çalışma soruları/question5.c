@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 int maxi,maxj;
-int tarama(int*,int,int,int[][3],int);
+int tarama(int **,int,int,int[][3],int);
 int main()
 {
     int a[3][3]={0,1,0,0,1,0,1,1,1},i=-1,dizi[1000],size,j;
@@ -14,21 +14,19 @@ int main()
     }   
     i++;
     size=sqrt(i);
-    int matris[size][size],*p;
+    int matris[size][size],**p[size];
     printf("\n\ngirilen matris\n");
     for(i=0;i<size;i++)
     {
         for(j=0;j<size;j++)
         {
-            matris[i][j]=dizi[i*size+j];
-            printf("%d ",matris[i][j]);
+            p[i][j]=dizi[i*size+j];
+            printf("%d ",p[i][j]);
         }
         printf("\n");
     }
-    p=matris;
-
     i=j=0;
-    tarama(*p,i,j,a,size);
+    tarama(**p,i,j,a,size);
     for(i=maxi;i<maxi+3;i++)
     {
         for(j=maxj;j<maxj+3;j++)
@@ -38,7 +36,7 @@ int main()
     }
     return 0;
 }
-int tarama (int *p, int i, int j, int a[][3], int size)
+int tarama (int **p, int i, int j, int a[][3], int size)
 {
     static int max=0;
     int k,l,counter=0;
@@ -57,9 +55,9 @@ int tarama (int *p, int i, int j, int a[][3], int size)
         maxj=j;
     }
     if(j<size-3)
-        return tarama(*p,i,j+1,a,size);
+        return tarama(**p,i,j+1,a,size);
     else if(i<size-3)
-        return tarama(*p,i+1,j,a,size);
+        return tarama(**p,i+1,j,a,size);
     else
         return 0;
 }
