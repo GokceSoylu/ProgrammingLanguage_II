@@ -1,5 +1,5 @@
 /* kullanıcıda alınan bir dizinin varyansını bulur.  varyans --> degerlerin ortalamadan farkının kareleri toplamının eleman sayısına bolumudur */
-#include <stdio.h>//çaçlısıyor ama pointer yok 
+#include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 int main()
