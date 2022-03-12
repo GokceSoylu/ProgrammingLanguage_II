@@ -1,5 +1,6 @@
 /* bir robotun aldıgı goruntu 0 1 lerden olusan nxn boyutlarında bir matris olarak alınmaktadır --> alınan matriste a matrisinie en cok benzeyen yerini bulunuz */
 #include <stdio.h>//bi dogru bi yanlıs calısıyor :(
+#include <stdlib.h>
 #include <math.h>
 int maxi,maxj,size;
 void tarama(int (*p)[],int,int,int[][3],int);

@@ -5,15 +5,12 @@ int  main()
 {
     int n,m,i,j;
     printf("\nsifre matrisinizin boyutları nelerdir? ");
-    scanf("%d%d",&n,&m);
-    char *p[m],cozum[100];
-    *p=(char*)malloc(sizeof(char)*n);
-    printf("\nsifre matrisinizi giriniz lutfen\n");//buradan sonra işler bozuluyor
+    scanf("%d",&n);
+    char (*p)[3]=(char*)malloc(sizeof(char)*n),cozum[100];//pp n elemanlı bir dizi her elemam m elemanlı baska bir dizi olsun dersem? for? olmuyorrr
+    printf("\nsifre matrisinizi giriniz lutfen\n");
     for(i=0;i<n;i++)
-    {
-        for(j=0;j<m;j++)
+        for(j=0;j<3;j++)
             scanf("%c",p[i][j]);
-    }
     n=m=0;
     printf("\n\nsifreyi giriniz lutfen(bitirmek icin -1 giriniz)\n");
     while(n!=-1)
