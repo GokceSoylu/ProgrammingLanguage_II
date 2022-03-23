@@ -1,4 +1,4 @@
-/* kullanıcının girdigi nxn lik matrisin week6 calisma sorulari 4 teki sekilde isarteli olan kısımların(j%2=0) toplamını bulan program */
+/* kullanıcının girdigi nxn lik matrisin week6 calisma sorulari 4 teki sekilde isarteli olan kısımların(j cift olanlar işaretli) toplamını bulan program */
 #include <stdio.h>
 #include <stdlib.h>
 int main()//poiter matris tanımladik ya :))
@@ -9,7 +9,7 @@ int main()//poiter matris tanımladik ya :))
     p=(int**)malloc(n*sizeof(int));
     for(i=0;i<n;i++)
         p[i]=(int*)malloc(n*sizeof(int));
-    printf("\nmatriisn elemanlarını giriniz lutfen\n");
+    printf("\nmatrisin elemanlarını giriniz lutfen\n");
     for(i=0;i<n;i++)
       for(j=0;j<n;j++)
         scanf("%d",&p[i][j]);
