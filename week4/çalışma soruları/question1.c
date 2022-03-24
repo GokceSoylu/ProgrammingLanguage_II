@@ -1,4 +1,4 @@
-/* verilen sifreyinin digitlerini elde edip onu i j degeri olarakmtaratip diziye aktaralim */
+/* verilen sifrenin digitlerini elde edip onu i j degeri olarak taratip diziye aktaralim */
 #include <stdio.h>
 #include <stdlib.h>
 int  main()
@@ -19,7 +19,7 @@ int  main()
         j=n%10;
         i=n/10;
         cozum[m]=p[i][j];
-        m++;
+        m++; 
     }
     for(i=0;cozum[i]!='\0';i++)
         printf("%c ",cozum[i]);
