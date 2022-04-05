@@ -1,4 +1,4 @@
-/* strcmp iiki stringi karsilastırır  iilk stringin ikinciden kısaysa <0 deger uzunsa >0 eger aynılarsa =0 deger dondurur */
+/* strcmp iki stringi karsilastırır */
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -9,7 +9,7 @@ int main()
     p=(char*)malloc(10*sizeof(char));
     strcpy(m,"Soylu");
     strcpy(n,"necmiye");
-    strcpy(k,"nec");
+    strcpy(k,"kbu");
     strcpy(p,m);
     i=strcmp(m,n);
     printf("\n%d",i);//<0
@@ -18,4 +18,5 @@ int main()
     i=strcmp(m,p);
     printf("\n%d",i);//=0
     return 0;
-}
+}//tek tek ilk elemanları alır ve ASCII degerlerine gore esit mi diye bakr eger ise sorun yok diger elemana gecer ta ki farklı olana yada
+//null olana kadar devam eder bunlardan biri olunca str1[i]-str2[i] nin int degerini dondurur
