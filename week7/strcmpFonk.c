@@ -11,7 +11,7 @@ int main()
 }
 int Fstrcmp(char *x, char *y)
 {
-    if(*x!='\0' && *y!='\0' && *x==*y)
+    if(*x && *y && *x==*y)//çok ilginç degil mi? *x means *x!='\0' whaat :))
     {
         x++;
         y++;
