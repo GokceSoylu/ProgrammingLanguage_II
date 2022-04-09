@@ -1,4 +1,4 @@
-/* sokma sıralaması */
+/* araya ekleme sıralaması */
 #include <stdio.h>
 #include <stdlib.h>
 int* insertion_sort(int*, int);
