@@ -22,7 +22,7 @@ int main()
 }
 int* bubble_Sort(int *a, int size)
 {
-    int i,j,tmp;
+    int i,j,tmp,cnt;
     for(i=0;i<size-1;i++)
         for(j=0;j<size-1-i;j++)
             if(a[j]>a[j+1])
