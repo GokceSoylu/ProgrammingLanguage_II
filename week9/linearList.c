@@ -32,11 +32,10 @@ int main()
     }
     p->next=NULL;
     p=head;
-    while(p->next!=NULL)
+    while(p!=NULL)
     {
         printf("\n\nname %s\nage %d",p->name,p->age);
         p=p->next;//bunu unutmayınız :))
     }    
-    printf("\n\nname %s\nage %d",p->name,p->age);
     return 0;
 }
