@@ -1,4 +1,4 @@
-/* -1 girilene kadar kullanıcının girdiği sayıları listenin başına, çift sayıları listenin sonuna kaydeden programı yazınız*/
+/* -1 girilene kadar kullanıcının girdiği tek sayıları listenin başına, çift sayıları listenin sonuna kaydeden programı yazınız*/
 #include <stdio.h>
 #include <stdlib.h>
 struct student
@@ -12,7 +12,7 @@ void add_beginning(std*);
 void add_last(std*);
 int main()
 {
-    head=(std*)malloc(sizeof(std));
+    //head=(std*)malloc(sizeof(std)); --> head boş olduğu için listenin ortasında bir adet 0 yazdırır.
     while(1)
     {
         new=(std*)malloc(sizeof(std));
@@ -26,7 +26,7 @@ int main()
             add_last(new);
         new=new->next;
     } 
-    while(head->next==NULL)
+    while(head!=NULL)
     {    
         printf("%d ",head->number);
         head=head->next;   
@@ -35,16 +35,12 @@ int main()
 }
 void add_beginning(std *new)
 {
-    //if(head->next==NULL)head=new;
-    //else
-    //{
-        new->next=head;//hata  burada ilk  başta head->next->next yok ki
-        head=new;
-    //} 
+    new->next=head;
+    head=new;
 }
 void add_last(std *new)
 {
-    std *p;
+    std *p=head;
     while(p->next!=NULL) p=p->next;
     p->next=new;
     new->next=NULL;
