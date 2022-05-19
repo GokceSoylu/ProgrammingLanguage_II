@@ -12,10 +12,10 @@ int main()
         printf("please enter account no, name, and balance  ");
         printf("to stop click control + d ");
         printf("\n?  ");
-        scanf("%d%s%d",&hesapNo,ad,&bakiye);
+        scanf("%d\n%s\n%d",&hesapNo,ad,&bakiye);
         while(!feof(stdin))
         {
-            fprintf(p,"%d%s%d\n",hesapNo,ad,bakiye);
+            fprintf(p,"%d%s%d",hesapNo,ad,bakiye);
             printf("\n?  ");
             scanf("%d%s%d",&hesapNo,ad,&bakiye);
         }

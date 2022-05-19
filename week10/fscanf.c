@@ -10,11 +10,11 @@ int main()
     else
     {
         printf("\naccount no name balace\n");
-        fscanf(p,"%d%s%d",&hesapNo,ad,&bakiye);
+        fscanf(p,"%d\n%s\n%d",&hesapNo,ad,&bakiye);
         while(!feof(p))
-        {
-            printf("\n%d%s%d",hesapNo,ad,bakiye);
-            fscanf(p,"%d%s%d",&hesapNo,ad,&bakiye);
+        { 
+            printf("\n%d\n%s\n%d",hesapNo,ad,bakiye);
+            fscanf(p,"%d\n%s\n%d",&hesapNo,ad,&bakiye);
         }
         fclose(p);
     }
