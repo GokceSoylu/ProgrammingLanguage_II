@@ -2,21 +2,18 @@
 #include <stdio.h>
 int main()
 {
-    int hesapNo, bakiye;
+    int hesapNo, bakiye, counter=0;
     char ad[20];
     FILE *p;
-    if((p=fopen("musteri","r"))==NULL)
-        printf("\nthe file could not be opened ");
-    else
-    {
-        printf("\naccount no name balace\n");
+    p=fopen("musteri","r");
+    printf("\naccount no name balace\n");
+    fscanf(p,"%d\n%s\n%d",&hesapNo,ad,&bakiye);
+    while(counter<3)
+    { 
+        counter++;
+        printf("\n%d\n%s\n%d",hesapNo,ad,bakiye);
         fscanf(p,"%d\n%s\n%d",&hesapNo,ad,&bakiye);
-        while(!feof(p))
-        { 
-            printf("\n%d\n%s\n%d",hesapNo,ad,bakiye);
-            fscanf(p,"%d\n%s\n%d",&hesapNo,ad,&bakiye);
-        }
-        fclose(p);
     }
-    return 0;
+    fclose(p);
+    return 0;//🤯 bu pointer neden sürekli ilk elemanı yazdırıyor? nedeeeeen?
 } 
