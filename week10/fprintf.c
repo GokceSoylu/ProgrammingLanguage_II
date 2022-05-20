@@ -2,8 +2,13 @@
 #include <stdio.h>
 int main()
 {
-    int hesapNo, bakiye;
-    char ad[20];
+    struct student
+    {
+        int hesapNo, bakiye;
+        char ad[20];
+    };
+    typedef struct student std;
+    std a;
     FILE *p;
     if((p=fopen("musteri","w"))==NULL)
         printf("the file cannot be opened ");
@@ -12,12 +17,12 @@ int main()
         printf("please enter account no, name, and balance  ");
         printf("to stop click control + d ");
         printf("\n?  ");
-        scanf("%d\n%s\n%d",&hesapNo,ad,&bakiye);
+        scanf("%d\n%s\n%d",&a.hesapNo,a.ad,&a.bakiye);
         while(!feof(stdin))
         {
-            fprintf(p,"%d%s%d",hesapNo,ad,bakiye);
+            fprintf(p,"%d%s%d\n",a.hesapNo,a.ad,a.bakiye);
             printf("\n?  ");
-            scanf("%d%s%d",&hesapNo,ad,&bakiye);
+            scanf("%d%s%d",&a.hesapNo,a.ad,&a.bakiye);
         }
         fclose(p);
     }
