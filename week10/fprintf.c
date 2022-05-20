@@ -2,27 +2,22 @@
 #include <stdio.h>
 int main()
 {
-    struct student
-    {
-        int hesapNo, bakiye;
-        char ad[20];
-    };
-    typedef struct student std;
-    std a;
+    int hesapNo, bakiye;
+    char ad[20];
     FILE *p;
     if((p=fopen("musteri","w"))==NULL)
         printf("the file cannot be opened ");
     else
     {
         printf("please enter account no, name, and balance  ");
-        printf("to stop click control + d ");
+        printf("to stop enter -1");
         printf("\n?  ");
-        scanf("%d\n%s\n%d",&a.hesapNo,a.ad,&a.bakiye);
-        while(!feof(stdin))
+        scanf("%d\n%s\n%d",&hesapNo,ad,&bakiye);
+        while(hesapNo!=-1)
         {
-            fprintf(p,"%d%s%d\n",a.hesapNo,a.ad,a.bakiye);
+            fprintf(p,"%d %s %d\n",hesapNo,ad,bakiye);//aradaki boşluğu silince fscanf.c'de sonsuz döngü oluyor
             printf("\n?  ");
-            scanf("%d%s%d",&a.hesapNo,a.ad,&a.bakiye);
+            scanf("%d%s%d",&hesapNo,ad,&bakiye);
         }
         fclose(p);
     }
