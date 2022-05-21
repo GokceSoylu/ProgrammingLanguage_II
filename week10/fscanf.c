@@ -11,8 +11,7 @@ int main()
     { 
         fscanf(p,"%d%s%d",&hesapNo,ad,&bakiye);
         printf("\n%d\n%s\n%d",hesapNo,ad,bakiye);
-        
     }
     fclose(p);
-    return 0;//🤯 bu pointer neden sürekli ilk elemanı yazdırıyor? nedeeeeen?
+    return 0;
 } 

@@ -10,18 +10,17 @@ int main()
     else
     {
         printf("please enter account no, name, and balance  ");
-        printf("to stop enter -1");
+        printf("to stop please click control+d ");
         printf("\n?  ");
         scanf("%d\n%s\n%d",&hesapNo,ad,&bakiye);
-        while(hesapNo!=-1)
+        while(!feof(stdin))
         {
-            fprintf(p,"%d %s %d\n",hesapNo,ad,bakiye);//aradaki boşluğu silince fscanf.c'de sonsuz döngü oluyor
+            fprintf(p,"%d %s %d\n",hesapNo,ad,bakiye);//aradaki boşluğu silince fscanf.c'de sonsuz döngü oluyor buradaki iki boşluk üç gündür depresyona soktu beni😅
             printf("\n?  ");
             scanf("%d%s%d",&hesapNo,ad,&bakiye);
         }
         fclose(p);
-    }
-    return 0;
+    }    return 0;
 }//özetle fprintf dosyaya yazdıran fonksiyondur fprintf(pointer_adı"%d",a); sadece başına pointerın
 //adını yazarız onun dışında normal printf gibidir
 //fopen dosya açan fonksiyondur pointer_adı = fopen("dosya_adı","acılıs_modu"); dosya acılamadığı durumda NULL döndürür
