@@ -11,7 +11,7 @@ int main()
     typedef struct bank bank;
     bank client;
     FILE *p;
-    if((p=fopen("bank","w"))==NULL)
+    if((p=fopen("bank2","w"))==NULL)
         printf("\nthe file could not be opened ");
     else
     {
