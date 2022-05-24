@@ -1,4 +1,4 @@
-/* kullanıcının girdigi nxn lik matrisin week6 calisma sorulari 4 teki sekilde isarteli olan kısımların(j cift olanlar işaretli) toplamını bulan program */
+/* kullanıcının girdigi nxn lik matrisin week6 calisma sorulari 4 teki sekilde isarteli olan kısımların(j+i = cift olanlar işaretli) toplamını bulan program */
 #include <stdio.h>
 #include <stdlib.h>
 int main()//poiter matris tanımladik ya :))
@@ -19,7 +19,7 @@ int main()//poiter matris tanımladik ya :))
         for(j=0;j<n;j++)
         {
             printf("%d ",p[i][j]);
-            if(j%2==0)
+            if((j+i)%2==0)
                 sum+=p[i][j];
         }
         printf("\n");
