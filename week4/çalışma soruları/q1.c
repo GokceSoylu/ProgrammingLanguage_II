@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 int main()
 {
     int satir ,sutun, i, j, n=0, counter=0;
@@ -25,7 +26,7 @@ int main()
             break;
         j=n%10;
         i=n/10;
-        *(counter+m)=p[i][j];
+        strcpy(&m[counter],&p[i][j]);
         counter++;
         m=realloc(m,(counter+1)*sizeof(char));
     }
