@@ -2,12 +2,11 @@
 programı yazınız. Dosya oluşturma, listeleme, yeni kayıt ekleme, isme göre arama kısımlarından oluşan bir menü şeklinde olmalıdır. */
 #include <stdio.h>
 #include <string.h>
-void new_record(FILE *p);
-void show(FILE *p);
-void search(FILE *p, char[]);  
+void new_record(void);
+void show(void);
+void search(char[]);  
 int main()
 {
-    FILE *p;
     int process;
     char name[20];
     printf("\nnewrecord 1\nshow list 2\nsearch by name 3\nexit 4  ");
@@ -17,15 +16,15 @@ int main()
         switch(process)
         {
             case 1:
-                new_record(p);
+                new_record();
                 break;
             case 2:
-                show(p);
+                show();
                 break;
             case 3:
                 printf("please type the name you want to search ");
                 scanf("%s",name);
-                search(p,name);
+                search(name);
                 break;
         }
         printf("\n? ");
@@ -33,8 +32,9 @@ int main()
     }
     return 0;
 }
-void new_record(FILE *p)
+void new_record(void)
 {
+    FILE *p;
     int student_num;
     char name[20], departmant[20];
     p=fopen("student","a");
@@ -47,7 +47,7 @@ void new_record(FILE *p)
     fprintf(p,"\n%d %s %s",student_num, name, departmant);
     fclose(p);
 }
-void show(FILE *p)
+void show(void)
 {
     int student_num;
     char name[20], departmant[20];
@@ -60,7 +60,7 @@ void show(FILE *p)
     }
     fclose(pp);
 }
-void search(FILE *p, char the_name[])
+void search(char the_name[])
 {
     int student_num;
     char name[20], departmant[20];
