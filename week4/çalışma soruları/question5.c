@@ -15,7 +15,7 @@ int main()
     }   
     i++;
     size=sqrt(i);
-    int matris[size][size],(*p)[size]=matris;//matrisi ata sonra alınan degerleri ppointerla al neden yani? biraz anlamsız olmus
+    int matris[size][size],(*p)[size]=matris;//matrisi ata sonra alınan degerleri pointerla al neden yani? biraz anlamsız olmus
     printf("\n\ngirilen matris\n");
     for(i=0;i<size;i++)
     {
