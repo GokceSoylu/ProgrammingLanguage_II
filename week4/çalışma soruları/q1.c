@@ -1,36 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 int main()
 {
-    int satir ,sutun, i, j, n=0, counter=0;
-    printf("sifre matrisinizin boyutları nedir?\nsatir ");
-    scanf("%d",&satir);
-    printf("sutun ");
-    scanf("%d",&sutun);
-    char **p;
-    p=(char**)malloc(satir*sizeof(char));
-    for(i=0;i<satir;i++)
-        p[i]=(char*)malloc(sutun*sizeof(char));
-    printf("matrisinizi giriniz lutfen\n");
-    for(i=0;i<satir;i++)
-        for(j=0;j<sutun;j++)
-            scanf("%c",&p[i][j]);
-    char *m;
-    m=(char*)malloc(sizeof(char));
-    while(1)
+    char *metin, *matris;
+    int row, column, i, j, counter=0, a=0;
+    printf("\n matrisin boyutlarını giriinz ");
+    scanf("%d%d",&row,&column);
+    matris=(char*)malloc((row*column)*sizeof(char));
+    metin=(char*)malloc(sizeof(char));
+    printf("\nsifre martrisi giriniz \n");
+    scanf("%s",matris);
+    printf("\nsifreyi giriniz. Durdurmak icin -1 giriniz ");
+    scanf("%d",&a);
+    while(a!=-1)
     {
-        printf("sifreyi giriniz durdurmak için -1\n");
-        scanf("%d",&n);
-        if(n==-1) break;
-        j=n%10;
-        i=n/10;
-        strcpy(&m[counter],&p[i][j]);
+        j=a%10;
+        i=a/10;
+        i--;
+        j--;
+        metin[counter]=matris[i*row+j];
         counter++;
-        m=realloc(m,(counter+1)*sizeof(char));
+        metin=realloc(metin,sizeof(char)*(counter+1));
+        printf("\n? ");
+        scanf("%d",&a);
     }
-    printf("sifreniz cozumlendi\n%s",m);
-    free(p);
-    free(m);
+    printf("\nsifre cözümlendi = %s",metin);
     return 0;
-}
+}// :)
