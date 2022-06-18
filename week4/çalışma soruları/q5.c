@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-void scan(int[],int, int, int[]);
 int main()
 {
     int N, i, j, n, m, max_i, max_j, max=0, *matris, counter, filter[3][3]={0,1,0,0,1,0,1,1,1};
