@@ -1,5 +1,6 @@
 #include<stdio.h> 
-char f1(int b); main()
+char f1(int b); 
+int main()
 {
     char a; 
     a=f1(10); 
