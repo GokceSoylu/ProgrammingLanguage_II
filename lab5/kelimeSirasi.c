@@ -15,7 +15,7 @@ int main()
     for(i=size-1;i>=-1;i--)
         if(*(p+i)==' ' || i==-1)
         {
-            for(j=i+1;*(p+j)!=' ' && *(p+j)!='\0';j++)
+            for(j=i+1;*(p+j)!=' '&&  *(p+j)!='\0';j++)
                 printf("%c",*(p+j));
             printf(" ");
         }    
