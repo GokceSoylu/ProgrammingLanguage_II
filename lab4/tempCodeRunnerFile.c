@@ -1,0 +1,1 @@
+için yaptıgımız degisiklikler koklu olur degiskeni etkiler! Zaten pointer kullanma mantiği bu bize bunu sağlamalı.
